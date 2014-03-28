@@ -8,13 +8,18 @@ var routes = require('./routes');
 var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
+var expressLayouts = require('express-ejs-layouts');
 
 var app = express();
 
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'ejs');
+app.set('layout', 'layout.html');
+app.engine('html', require('ejs').renderFile);
+app.use(expressLayouts);
+app.use(express.compress());
 app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.bodyParser());

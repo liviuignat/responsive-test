@@ -1,8 +1,32 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.page-container {
+   max-width: 994px;
 }
 
-a {
-  color: #00B7FF;
+.insurance-image-choice {
+    float:left;
+    width: 50px;
+    height: 70px;
+    margin: 5px 10px 0 0;
+    border: 0px solid black;
+}
+
+.insurance-image-choice > img {
+    height: 50px;
+    width: 50px;
+}
+.insurance-image-choice > span {
+    display: block;
+    width: 100%;
+    font-size: 85%;
+    text-align: center;
+    margin: 5px 0 0 0;
+}
+
+@media screen and (max-width: 1200px) {
+
+}
+@media screen and (max-width: 992px) {
+}
+
+@media screen and (max-width: 767px) {
 }
